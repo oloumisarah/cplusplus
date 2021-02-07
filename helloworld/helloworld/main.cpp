@@ -97,5 +97,74 @@ int main()
     doNothing(h);
     std::cout<<h;
     
+    // *********** UNINITIALIZED VARIABLES ***********
+    
+    std::cout<<"Hi There!";     // Literal
+    int k{7};                   // Literal
+    
+    // Literal == literal constant -- A fixed value that has been inserted directly into the source code
+    
+    // Operator          -->           arithmatic operators +, *, /, %,
+    // Equality operator -->           ==
+    // word operators    -->           new, delete, throw
+    
+    // Unary operator    -->           act on one operand     ex: - operator .... -5
+    // Binary operator   -->           acts on two operands   ex: 3 + 4
+    // Ternary operator  -->           acts on three operands
+    
+    // *********** Expressions ***********
+    
+    // Combination of literals, varaibles, operators, and explicit function calls.
+    int j{3+6};
+    // type  identifier {expression};
+    
+    // A statement is used when we want to perform an action while an expression cacluates a value.
+    
+    std::cout << 2 + 3 << '\n';                 // This outputs 5
+    
+    int number{6};
+    int anotherNumber{number - 2};
+    std::cout << anotherNumber << '\n';         // This outputs 4
+    
+    int i{0};
+    i = number;
+    std::cout << i - number << '\n';            // This outputs 0
+    
+    // *********** First program ***********
+    
+    // Create a program that asks the user to enter an integer, waits for them to input an integer, then tells them what 2 times that number is.
+    
+    std::cout << "Enter an integer and I'll show you what its double and triple is: \n";
+    int userInt{0};
+    std::cin >> userInt;
+    std::cout << "Integer entered was " << userInt << " and its double is: " << userInt * 2 << '\n';
+    std::cout << "Integer entered was " << userInt << " and its double is: " << userInt * 3 << '\n';
+
+    
+    // *********** Second program ***********
+    /* Write a program that asks the user to enter a number, and then enter a second number.
+       The program should tell the user what the result of adding and subtracting the two numbers are.
+     
+     Expected Output:
+     
+     Enter an integer: 6
+     Enter another integer: 4
+     6 + 4 is 10.
+     6 - 4 is 2.
+     
+     */
+    
+    std::cout<<"Enter an integer: ";
+    int userInput{0};
+    std::cin>>userInput;
+    
+    std::cout<<"Enter another integer: ";
+    int anotherUserInput{0};
+    std::cin>>anotherUserInput;
+    
+    std::cout<< userInput << " + " << anotherUserInput <<" = "<< userInput+anotherUserInput << '\n';
+    std::cout<< userInput << " - " << anotherUserInput <<" = "<< userInput-anotherUserInput << '\n';
+    
+    
     return 0;
 }
